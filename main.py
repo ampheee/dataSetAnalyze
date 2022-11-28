@@ -68,29 +68,7 @@ plt.show()
 
 print('\n')
 
-plots(df, 'BMI')def plots(df, variable):
-    plt.figure(figsize=(22, 4), dpi=200)
-
-    # histogram
-    ax = plt.subplot(1, 3, 1)
-    sns.kdeplot(df[variable], color='Red', fill=True)
-    ax.set_title("Density Plot", fontsize=15, fontweight='normal', fontfamily='serif')
-    plt.ylabel('Density', fontfamily='serif')
-    plt.xlabel(variable, fontfamily='serif')
-    for s in ['top', 'left', 'right']:
-        ax.spines[s].set_visible(False)
-
-plots(df, 'BloodPressure')
-
-plt.figure(figsize=(20, 5))
-sns.kdeplot('BloodPressure', hue='Outcome', data=df, palette='Set2')
-plt.show()
-
-print('\n')
-
-plots(df, 'Glucose')
-
-plt.figure(figsize=(20, 5))
+plots(df, 'BMI')
 
 plt.figure(figsize=(20, 5))
 sns.kdeplot('BMI', hue='Outcome', data=df, palette='Accent')
